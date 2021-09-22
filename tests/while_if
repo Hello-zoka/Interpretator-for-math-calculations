@@ -1,0 +1,13 @@
+x = 1;
+s = 0;
+kek = 239;
+while (x <= 30)
+{
+  if (x == 17) {
+    print(kek);
+  }
+  s = s + x;
+  x = x + 1;
+}
+print(s + x);
+
