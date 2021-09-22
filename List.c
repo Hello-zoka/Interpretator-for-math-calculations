@@ -91,15 +91,15 @@ void ClearQueue( QUEUE *Q )
 void PrintTok( TOK T )
 {
     if (T.Id == TOK_OP)
-        printf("op:%c ", T.Op);
+        printf("op: %c ", T.Op);
     else if (T.Id == TOK_NUM)
-        printf("integer:%f ", T.Num);
+        printf("integer: %f ", T.Num);
     else if (T.Id == TOK_SYMBOL)
-        printf("symb:%c ", T.Op);
+        printf("symbol: %c ", T.Op);
     else if (T.Id == TOK_NAME)
-        printf("name %s ", T.Name);
+        printf("name: %s ", T.Name);
     else if (T.Id == TOK_KEYW)
-        printf ("keyw: %s ", T.Name);
+        printf ("keyword: %s ", T.Name);
     else
         printf("UNKNOWN ");
 }

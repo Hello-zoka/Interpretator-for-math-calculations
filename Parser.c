@@ -70,6 +70,8 @@ int GetPrior( OPERS Op )
             return 6;
         case OP_POW:
             return 7;
+        case OP_UNAR:
+            return 8;
     }
     Error("Unknown operator: '%c'", Op);
 
@@ -113,6 +115,10 @@ void ParseExpr( LIST **Expr )
                     Put(&Queue1, TokCurrent), state = STATE_SUFFIX, NextTok();
                 else if (IsTokOp('('))
                     Push(&Stack2, TokCurrent), NextTok();
+                else if (IsTokOp('-')) {
+                    TokCurrent.Op = OP_UNAR;
+                    Push(&Stack2, TokCurrent), NextTok();
+                }
                 else
                     Error("Wait for number or '(' \n");
                 break;

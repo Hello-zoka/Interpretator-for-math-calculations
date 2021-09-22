@@ -8,10 +8,11 @@ typedef enum
 } TOKID;
 typedef enum
 {
-    KW_IF, KW_ELSE, KW_WHILE, KW_PRINT, KW_SCAN
+    KW_IF, KW_ELSE, KW_WHILE, KW_PRINT
 } KEYWORDS;
 typedef enum
 {
+    OP_UNAR = '@',
     OP_PLUS = '+',
     OP_MINUS = '-',
     OP_MULT  = '*',

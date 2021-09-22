@@ -24,8 +24,10 @@ double Eval( LIST *Expr )
             if (T.Op != '@')
             {
                 Pop(&StackEval, &B);
-                if (B.Id == TOK_NAME)
+                if (B.Id == TOK_NAME) {
                     B.Num = GetValue(B.Name);
+                    B.Id = TOK_NUM;
+                }
             }
             Pop(&StackEval, &A);
             if (A.Id == TOK_NAME && T.Op != '=') {
@@ -36,6 +38,9 @@ double Eval( LIST *Expr )
             {
                 case '+':
                     A.Num += B.Num;
+                    break;
+                case '@':
+                    A.Num = -A.Num;
                     break;
                 case '-':
                     A.Num -= B.Num;

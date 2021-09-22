@@ -59,7 +59,7 @@ int main( void )
             Scanner(&TokList, Buf);
         fclose(F);
     }
-//    DisplayQueue(&TokList);
+    DisplayQueue(&TokList); // Printing scanner results
     ParseProgram();
     DoCmd(Proga);
 

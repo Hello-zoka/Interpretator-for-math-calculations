@@ -14,8 +14,7 @@ void UpdateKeyword( TOK *T )
                     {"if", KW_IF},
                     {"else", KW_ELSE},
                     {"while", KW_WHILE},
-                    {"print", KW_PRINT},
-                    {"scan", KW_SCAN},
+                    {"print", KW_PRINT}
             };
     int i;
 
