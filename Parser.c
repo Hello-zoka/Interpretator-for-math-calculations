@@ -133,9 +133,10 @@ void ParseExpr( LIST **Expr )
                     }
                     else
                     {
-                        if (!Pop(&Stack2, &TokCurrent))
+                        if (!Pop(&Stack2, &TokCurrent)) {
                             state = STATE_DONE;
-                        break;
+                            break;
+                        }
                     }
                     ParseAnyTok();
 
