@@ -5,7 +5,7 @@ Here you can find my implementation of a simple programming language interpreter
 It supports:
 1) Variables;
 2) Expressions with all standard arithmetic operations(`+`, `-`, `*`, `/`, `%`, `^`), brackets, unary minus, variables
-3) `for` and `while` loops
+3) `while` loops
 4) `print(<Expression>)` function
 5) `if` statment
 
